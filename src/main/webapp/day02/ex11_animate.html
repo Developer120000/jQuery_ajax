@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+		position: absolute;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		let position = 0;
+		let timer;
+		
+		$('#btn').click(function() {
+			// setInterval() => 지정한 초마다 콜백함수 계속 실행, 끝명령 내려야 멈춘다. js 메소드
+			// clearInterval() 로 실행 종료
+			timer = setInterval(() => {
+				position += 5; // 1초마다 5씩 계속 증가
+				$('img').css({'marginLeft' : position, 'marginTop' : position}); // 0.2초마다 왼쪽 위쪽 여백증가로 이동
+			}, 50);
+		});
+		$('img').click(function() {
+			clearInterval(timer); // 이미지 클릭하면 멈춤
+		});
+	})
+</script>	
+</head>
+<body>
+	<button id="btn">이동</button>
+	<div>
+		<img alt="" src="../images/img03.jpg">
+	</div>
+</body>
+</html>

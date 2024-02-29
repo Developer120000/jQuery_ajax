@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>한줄 뉴스 - 자바스크립트 형식</title>
+<script type="text/javascript">
+		const news = [
+			"한섬 ‘타임’, 글로벌 패션 시장 데뷔…파리 패션위크 진출",
+			"유료 멤버십에 빛난 쿠팡…사상 첫 연간 흑자",
+			"컬리, 국내 최초 ‘경주·포항’ 샛별배송 시작…영남권 확장",
+			"코오롱인더스트리, 필름 사업 매각 대신 ‘이것’ 택했다 ",
+			"정유사 거느린 석유화학업체 성과급 줄어 ",
+			"롯데칠성음료 밀키스, 지난해 매출 1000억원 ‘돌파’"];
+		
+		let index = 0;
+		let timer;
+		function start_news() {
+			// 2초마다 shownews 함수를 실행하자. (shownews 는 콜백함수)
+			timer = setInterval(() => {
+				let div = document.querySelector('#mydiv');
+				div.textContent = news[index++]; // 뉴스를 2초마다 하나씩 추가
+				// 뉴스가 뉴스개수랑 같아지면(즉, 뉴스가 끝까지 나오면) 다시 처음뉴스부터
+				if(index === news.length){index = 0};
+			}, 2000);
+		}
+		
+		function stop_news() {
+			// setInterval() 중지
+			clearInterval(timer);
+		}
+</script>	
+</head>
+<body>
+	<div id="mydiv"></div>
+	<button onclick="start_news()">뉴스보기</button>
+	<button onclick="stop_news()">뉴스중지</button>
+</body>
+</html>

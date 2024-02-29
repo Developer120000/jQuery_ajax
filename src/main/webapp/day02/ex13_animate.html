@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>한줄 뉴스 - jQuery 형식</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		const news = [
+			"한섬 ‘타임’, 글로벌 패션 시장 데뷔…파리 패션위크 진출",
+			"유료 멤버십에 빛난 쿠팡…사상 첫 연간 흑자",
+			"컬리, 국내 최초 ‘경주·포항’ 샛별배송 시작…영남권 확장",
+			"코오롱인더스트리, 필름 사업 매각 대신 ‘이것’ 택했다 ",
+			"정유사 거느린 석유화학업체 성과급 줄어 ",
+			"롯데칠성음료 밀키스, 지난해 매출 1000억원 ‘돌파’"];
+		
+		let index = 0;
+		setInterval(() => {
+			$('#mydiv').text(news[index++]);
+			if(index === news.length) index = 0;
+		}, 2000);
+	})
+</script>	
+</head>
+<body>
+	<div id="mydiv"></div>
+</body>
+</html>

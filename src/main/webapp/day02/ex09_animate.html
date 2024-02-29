@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.box{
+		background-color: #abc;
+		left: 50px;
+		width: 90px;
+		height: 90px;
+		margin: 5px;
+		position: absolute;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		$('#right').click(function() {
+			$('.box').animate({
+				'left' : '+=50' // 왼쪽 여백 기준
+			}, 'slow');  // $(선택자).animate({params}, speed, callback(생략 가능)); 
+		});
+		$('#left').click(function() {
+			$('.box').animate({
+				'left' : '-=50'
+			}, 'slow');  // $(선택자).animate({params}, speed, callback(생략 가능)); 
+		});
+	})
+</script>	
+</head>
+<body>
+	<button id="left">&lt;&lt;</button>
+	<button id="right">&gt;&gt;</button>
+	<div class="box"></div>
+</body>
+</html>
