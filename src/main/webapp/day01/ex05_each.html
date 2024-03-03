@@ -10,8 +10,9 @@
 		// each(function(index, value){실행내용})
 		// each(function(key, value){실행내용})
 		// ** 여러번 반복할 때 현재 실행 중인 요소를 선택할 때 this 사용
-		$('p').each(function(index) {
-			$(this).attr('id', 'para-' + index);
+		$('p').each(function(i) {
+			let a = $(this).attr('id', 'para-' + i); // attr() 메소드로 각 p태그의 id 를 para-위치값 으로 추가한다. 그래서 아래 css적용 가능 
+			console.log(a);
 		});
 	
 		$('#btn1').click(function() {
@@ -26,6 +27,9 @@
 		})
 	})
 </script>
+<style type="text/css">
+	#para-1{background: red;}
+</style>
 </head>
 <body>
 	<p>이것은 문단-1 태그 입니다</p>

@@ -10,19 +10,19 @@
 // 			$('p:eq(1)').css('color', 'red');
 // 			$('p:nth-of-type(2)').css({'color' : 'green'}); // 다른방법1
 			$('.btn1').parent().next().css('color', 'red'); // .btn1 의 부모는 <p> 태그 의 next(), 즉 다음 <p> 태그
-		})
+		});
 		
 		// 마우스 포인터를 올리거나 포커스를 이용하면 글자색 초록색
 		// 마우스 포커스가 벗어나면 글자색 검정색
 		$('.btn2').on({
-			'mouseover focus' : function() {
+			'mouseover focus' : function() { // mouseover : 마우스 포인트를 올렸을때, focus : 키보드로 포커스 줄때(탭키 등 으로)
 				$('.btn2').parent().next().css('color', 'green');
 			},
-			'mouseout blur' : function() {
+			'mouseout blur' : function() { // mouseout : 마우스 포인트를 벗어났을때, blur : 키보드로 줬던 포커스 벗어날때
 				$('.btn2').parent().next().css('color', 'black');
 			}
-		})
-	})
+		});
+	});
 </script>
 </head>
 <body>

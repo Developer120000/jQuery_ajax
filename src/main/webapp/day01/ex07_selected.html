@@ -10,7 +10,7 @@
 		$('#wrap p:hidden').css({'display' : 'block', 'background' : 'green'});
 		
 		// select 태그에서 선택된 요소
-		// val() => form 의 값을 뜻한다.
+		// val() => 주로 form 요소에서 value 를 가져오거나 설정하는데 사용
 		const z1 = $('#zone1 :selected').val();
 		console.log(z1);
 		
@@ -30,11 +30,11 @@
     </div>
     <form action="#">
         <p id="zone1">
-        <select name="course" id="course">
-                <option value="opt1">옵션1</option>
-                <option value="opt2" selected>옵션2</option>
-                <option value="opt3">옵션3</option>
-        </select>
+	        <select name="course" id="course">
+	                <option value="opt1">옵션1</option>
+	                <option value="opt2" selected>옵션2</option>
+	                <option value="opt3">옵션3</option>
+	        </select>
         </p>
         <p id="zone2">
                 <input type="checkbox" name="hobby" value="독서"> 독서

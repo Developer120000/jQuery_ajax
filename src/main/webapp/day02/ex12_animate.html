@@ -17,8 +17,11 @@
 		function start_news() {
 			// 2초마다 shownews 함수를 실행하자. (shownews 는 콜백함수)
 			timer = setInterval(() => {
-				let div = document.querySelector('#mydiv');
-				div.textContent = news[index++]; // 뉴스를 2초마다 하나씩 추가
+				// js 식
+// 				let div = document.querySelector('#mydiv');
+// 				div.textContent = news[index++]; // 뉴스를 2초마다 하나씩 추가
+				// jQuery 식
+				let div = $('mydiv').text(news[index++]);
 				// 뉴스가 뉴스개수랑 같아지면(즉, 뉴스가 끝까지 나오면) 다시 처음뉴스부터
 				if(index === news.length){index = 0};
 			}, 2000);

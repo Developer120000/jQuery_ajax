@@ -6,10 +6,10 @@
 	DTD 라는 xml 문서의 구조 및 해당 문서를 사용할 수 있는 
 	적법한 요소 및 속성을 정의한 것.
 	
-	xml 은 루트 태그 하나만 존재한다.
+	xml 은 루트 태그 하나만 존재한다. 제일 상위에 있는 태그 = 루트 태그
  -->
- <products>
- 	<product>
+<products>
+	<product>
  		<name>흰우유</name>
  		<price>1050</price>
  	</product>
@@ -24,5 +24,5 @@
  	<product>
  		<name>쥬스</name>
  		<price>2500</price>
- 	</product>
- </products>
+ 	</product> 
+</products>

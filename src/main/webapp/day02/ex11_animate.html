@@ -18,8 +18,8 @@
 			// setInterval() => 지정한 초마다 콜백함수 계속 실행, 끝명령 내려야 멈춘다. js 메소드
 			// clearInterval() 로 실행 종료
 			timer = setInterval(() => {
-				position += 5; // 1초마다 5씩 계속 증가
-				$('img').css({'marginLeft' : position, 'marginTop' : position}); // 0.2초마다 왼쪽 위쪽 여백증가로 이동
+				position += 5; // 0.05초마다 5씩 계속 증가
+				$('img').css({'marginLeft' : position, 'marginTop' : position}); // 0.05초마다 왼쪽 위쪽 여백증가로 이동
 			}, 50);
 		});
 		$('img').click(function() {

@@ -19,7 +19,9 @@
 		$('#right').click(function() {
 			$('.box').animate({
 				'left' : '+=50' // 왼쪽 여백 기준
-			}, 'slow');  // $(선택자).animate({params}, speed, callback(생략 가능)); 
+			}, 'slow', () => {
+				alert('오른쪽으로 이동');
+			});  // $(선택자).animate({params}, speed, callback(생략 가능)); 
 		});
 		$('#left').click(function() {
 			$('.box').animate({
